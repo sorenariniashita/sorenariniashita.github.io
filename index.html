@@ -12,6 +12,10 @@
     background-position: center; /* 画像を中央に配置 */
         background-color: rgba(255, 255, 255, 0.3); /* 背景の白色と透過率を指定 */
   }
+        /* 新しいスタイルを追加 */
+  .item {
+    margin-bottom: 20px; /* 項目間の余白を設定 */
+  }
 </style>
 </head>
 <body>
@@ -35,6 +39,47 @@ document.addEventListener("DOMContentLoaded", function() {
   // moveText関数を10秒ごとに実行
   setInterval(moveText, 10000);
 });
+      <!-- コメント欄を追加 -->
+<div id="comments">
+  <h3>コメント欄</h3>
+  <textarea id="commentInput" rows="4" cols="50" placeholder="コメントを入力してください"></textarea>
+  <button onclick="submitComment()">コメントを投稿する</button>
+  <div id="commentList"></div>
+</div>
+
+<!-- 観覧した人数を表示する -->
+<div id="viewCount"></div>
+
+<script>
+// 観覧した人数をカウントする変数を初期化
+var viewCount = 0;
+
+// ページが読み込まれたときに実行される関数
+document.addEventListener("DOMContentLoaded", function() {
+  // 観覧した人数を1増やす
+  viewCount++;
+
+  // 観覧した人数を表示する
+  document.getElementById("viewCount").innerText = "観覧した人数: " + viewCount;
+});
+
+// コメントを投稿する関数
+function submitComment() {
+  // 入力されたコメントを取得
+  var comment = document.getElementById("commentInput").value;
+
+  // コメントが空でない場合のみ処理を実行
+  if (comment.trim() !== "") {
+    // コメントを表示する要素を作成
+    var commentElement = document.createElement("div");
+    commentElement.innerText = comment;
+
+    // コメントリストにコメントを追加
+    document.getElementById("commentList").appendChild(commentElement);
+
+    // コメント入力欄をクリア
+    document.getElementById("commentInput").value = "";
+  }
 </script>
 </body>
 </html>
