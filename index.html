@@ -1,45 +1,31 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-　<meta charset="UTF-8">
-　<meta name="viewport" content="width=device-width, initial-scale=1.0">
-　<title>俺のサイトだぜっ</title>
-   <style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>俺のサイトだぜっ</title>
+<style>
   body {
-    color: black; /* 本文の色を青色に設定 */
-     background-image: url('https://p3-sdbk2-media.byteimg.com/tos-cn-i-xv4ileqgde/6f15aae6e57b48c896aafc7c7bd39f18~tplv-xv4ileqgde-resize-w:750.image'); /* 背景画像の設定 */
+    color: black; /* 本文の色を黒色に設定 */
+    background-image: url('https://p3-sdbk2-media.byteimg.com/tos-cn-i-xv4ileqgde/6f15aae6e57b48c896aafc7c7bd39f18~tplv-xv4ileqgde-resize-w:750.image'); /* 背景画像の設定 */
     background-size: cover; /* 画面全体に画像を広げる */
     background-position: center; /* 画像を中央に配置 */
-        background-color: rgba(255, 255, 255, 0.3); /* 背景の白色と透過率を指定 */
+    background-color: rgba(255, 255, 255, 0.3); /* 背景の白色と透過率を指定 */
   }
-        /* 新しいスタイルを追加 */
+  /* 新しいスタイルを追加 */
   .item {
     margin-bottom: 20px; /* 項目間の余白を設定 */
   }
 </style>
 </head>
 <body>
-　<h2>俺のサイトだぜっ。ようこそ　これを見た人に一言。このサイトはハズレだ！</h2>
-　<p>いや～乱世ですな　　　　
-   こうやってネットの海に漂う屍hpを生み出してしまった。。。
- それも一興。　
-   ネットサーフィンばかりしてきたけど、やっとネットの海に潜れた気がする。</p>
-   <script>
-// ページの読み込み後に実行されるJavaScript
-document.addEventListener("DOMContentLoaded", function() {
-  // テキスト要素を取得
-  var movingText = document.getElementById("movingText");
+<h2>俺のサイトだぜっ。ようこそ　これを見た人に一言。このサイトはハズレだ！</h2>
+<p>いや～乱世ですな　　　　
+  こうやってネットの海に漂う屍hpを生み出してしまった。。。
+それも一興。　
+  ネットサーフィンばかりしてきたけど、やっとネットの海に潜れた気がする。</p>
 
-  // テキストを動かすアニメーションの関数
-  function moveText() {
-    // テキストを左に10ピクセル移動
-    movingText.style.marginLeft = "10px";
-  }
-
-  // moveText関数を10秒ごとに実行
-  setInterval(moveText, 10000);
-});
-      <!-- コメント欄を追加 -->
+<!-- コメント欄を追加 -->
 <div id="comments">
   <h3>コメント欄</h3>
   <textarea id="commentInput" rows="4" cols="50" placeholder="コメントを入力してください"></textarea>
@@ -80,6 +66,7 @@ function submitComment() {
     // コメント入力欄をクリア
     document.getElementById("commentInput").value = "";
   }
+}
 </script>
 </body>
 </html>
