@@ -16,6 +16,12 @@
   .item {
     margin-bottom: 20px; /* 項目間の余白を設定 */
   }
+  /* コメントのスタイル */
+  .comment {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+  }
 </style>
 </head>
 <body>
@@ -58,7 +64,9 @@ function submitComment() {
   if (comment.trim() !== "") {
     // コメントを表示する要素を作成
     var commentElement = document.createElement("div");
-    commentElement.innerText = comment;
+    var now = new Date();
+    var timestamp = now.toLocaleString(); // タイムスタンプを取得
+    commentElement.innerHTML = '<div class="comment"><strong>' + timestamp + '</strong><br>' + comment + '</div>';
 
     // コメントリストにコメントを追加
     document.getElementById("commentList").appendChild(commentElement);
@@ -70,4 +78,5 @@ function submitComment() {
 </script>
 </body>
 </html>
+
 
